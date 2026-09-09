@@ -1,16 +1,49 @@
+/* Color de fondo para toda la página y fuente del texto */
 body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
+  padding-left: 11em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #6F5D44;
+  background-color: #CCC5B7;
 }
 
+/* Estilos para el menú de navegación */
+ul.navbar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 2em;
+  left: 1em;
+  width: 9em;
+}
+
+/* Estilos para los enlaces dentro del menú */
+ul.navbar li {
+  background: white;
+  margin: 0.5em 0;
+  padding: 0.3em;
+  border-right: 1em solid #E5BB89;
+}
+
+ul.navbar a {
+  text-decoration: none;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+/* Estilos para el título y el pie de página */
 h1 {
-    text-align: center;
+  font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
 }
 
-h2 {
-    margin-top: 30px;
-}
-
-p {
-    font-size: 18px;
+address {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: thin dotted;
 }
