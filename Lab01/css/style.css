@@ -52,3 +52,49 @@ address {
   padding-top: 1em;
   border-top: thin dotted;
 }
+/* Contenedor principal de la sección */
+.contenedor-sobre-mi {
+  padding: 20px; 
+  max-width: 1000px; /* Aumentamos el máximo para que quepan texto e imagen */
+  margin: 0 auto; 
+}
+
+/* Estructura Flexbox para poner texto a la izquierda e imagen a la derecha */
+.contenido-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px; /* Espacio entre el texto y la imagen */
+}
+
+.texto-columna {
+  flex: 1; /* Ocupa el espacio disponible */
+}
+
+.imagen-columna {
+  flex-shrink: 0; /* Evita que la imagen se reduzca o aplaste */
+}
+
+/* Ajuste de la imagen dentro de la sección */
+.imagen-columna img {
+  width: 250px;       /* Ancho fijo para la foto de perfil */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra suave opcional */
+}
+
+/* Estilo para el botón */
+.btn-volver {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #E5BB89;
+  color: #5c184c; /* Cambiado a un tono oscuro para mejorar la lectura sobre beige */
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.btn-volver:hover {
+  background-color: #d4a773;
+}
