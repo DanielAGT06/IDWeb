@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Universitaria - Sistema Académico</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 1. Navegación y Cabecera (Bootstrap 5) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Portal Académico</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#noticias">Noticias</a></li>
+                </ul>
+                <div class="d-flex gap-2 mt-2 mt-lg-0">
+                    <button class="btn btn-outline-light btn-sm" type="button">Iniciar Sesión</button>
+                    <button class="btn btn-warning btn-sm" type="button">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section (Flexbox CSS Nativo) -->
+    <header id="inicio" class="hero-container">
+        <div class="hero-content">
+            <h1>Transforma tu futuro profesional hoy</h1>
+            <p>Accede a la mejor plataforma de gestión académica con cursos de vanguardia y formación de excelencia.</p>
+            <a href="#cursos" class="btn btn-primary btn-lg mt-3">Explorar Cursos</a>
+        </div>
+    </header>
+
+    <!-- 3. Catálogo de Cursos Ofertados (CSS Grid Nativo) -->
+    <section id="cursos" class="container py-5">
+        <h2 class="text-center mb-4">Cursos Ofertados</h2>
+        <div class="course-grid">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Desarrollo Web Full Stack</h5>
+                    <p class="card-text">Aprende HTML5, CSS3, JavaScript y frameworks modernos desde cero.</p>
+                </div>
+            </div>
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Base de Datos Avanzada</h5>
+                    <p class="card-text">Diseño, optimización y administración de bases de datos relacionales.</p>
+                </div>
+            </div>
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Arquitectura de Software</h5>
+                    <p class="card-text">Patrones de diseño, microservicios y buenas prácticas de ingeniería.</p>
+                </div>
+            </div>
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Inteligencia Artificial</h5>
+                    <p class="card-text">Introducción al aprendizaje automático y procesamiento de datos.</p>
+                </div>
+            </div>
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Ciberseguridad</h5>
+                    <p class="card-text">Fundamentos de seguridad de la información y protección de redes.</p>
+                </div>
+            </div>
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Computación en la Nube</h5>
+                    <p class="card-text">Despliegue y gestión de infraestructura en entornos cloud.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Módulo de Noticias y Eventos (Bootstrap Components) -->
+    <section id="noticias" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Noticias y Eventos</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Conferencia de Innovación 2026</h5>
+                            <p class="card-text">Participa en el evento tecnológico más importante del año académico.</p>
+                            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#infoModal">Más información</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Bootstrap -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Detalle del Evento</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    La Conferencia de Innovación Tecnológica se llevará a cabo del 15 al 18 de octubre. ¡Inscripciones abiertas!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
