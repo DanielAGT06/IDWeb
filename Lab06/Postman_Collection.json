@@ -1,0 +1,116 @@
+{
+  "info": {
+    "name": "API Cursos - Laboratorio 06",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Obtener Cursos (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/cursos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "cursos"]
+        }
+      }
+    },
+    {
+      "name": "Filtrar Cursos por Créditos (GET query)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/cursos?creditos=4",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "cursos"],
+          "query": [
+            {
+              "key": "creditos",
+              "value": "4"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Obtener Curso por ID (GET :id)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/cursos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "cursos", "1"]
+        }
+      }
+    },
+    {
+      "name": "Crear Curso (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Inteligencia Artificial\",\n  \"codigo\": \"CS201\",\n  \"creditos\": 5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/cursos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "cursos"]
+        }
+      }
+    },
+    {
+      "name": "Actualizar Curso (PUT :id)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Desarrollo Web Avanzado\",\n  \"creditos\": 5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/cursos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "cursos", "1"]
+        }
+      }
+    },
+    {
+      "name": "Eliminar Curso (DELETE :id)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/cursos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "cursos", "1"]
+        }
+      }
+    }
+  ]
+}
