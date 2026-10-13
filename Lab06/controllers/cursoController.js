@@ -1,6 +1,5 @@
 let cursos = require('../data/cursosData');
 
-// GET /api/cursos (obtiene todos los cursos o filtra por query string ?creditos=X)
 exports.getAllCursos = (req, res) => {
   const { creditos } = req.query;
 
@@ -21,7 +20,6 @@ exports.getAllCursos = (req, res) => {
   });
 };
 
-// GET /api/cursos/:id (busca curso por ID)
 exports.getCursoById = (req, res) => {
   const id = parseInt(req.params.id, 10);
   const curso = cursos.find(c => c.id === id);
@@ -38,8 +36,6 @@ exports.getCursoById = (req, res) => {
     data: curso
   });
 };
-
-// POST /api/cursos (valida campos obligatorios y crea un curso)
 exports.createCurso = (req, res) => {
   const { nombre, codigo, creditos } = req.body;
 
@@ -66,7 +62,6 @@ exports.createCurso = (req, res) => {
   });
 };
 
-// PUT /api/cursos/:id (actualiza las propiedades de un curso)
 exports.updateCurso = (req, res) => {
   const id = parseInt(req.params.id, 10);
   const index = cursos.findIndex(c => c.id === id);
@@ -93,7 +88,6 @@ exports.updateCurso = (req, res) => {
   });
 };
 
-// DELETE /api/cursos/:id (elimina el curso del arreglo local)[cite: 6]
 exports.deleteCurso = (req, res) => {
   const id = parseInt(req.params.id, 10);
   const index = cursos.findIndex(c => c.id === id);

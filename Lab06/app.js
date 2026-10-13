@@ -3,10 +3,8 @@ const cursoRoutes = require('./routes/cursoRoutes');
 
 const app = express();
 
-// 1. Middleware global incorporado para parseo de JSON[cite: 6]
 app.use(express.json());
 
-// 2. Middleware personalizado de Auditoría (Logger): Método, URL y Tiempo de respuesta[cite: 6]
 app.use((req, res, next) => {
   const startMs = Date.now();
   res.on('finish', () => {
@@ -16,7 +14,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// Enrutamiento principal[cite: 6]
 app.use('/api/cursos', cursoRoutes);
 
 // Manejo de rutas no encontradas (404)
@@ -27,7 +24,7 @@ app.use((req, res, next) => {
   });
 });
 
-// 3. Middleware global de Manejo de Errores (captura errores no controlados)[cite: 6]
+
 app.use((err, req, res, next) => {
   console.error('Error no controlado:', err.stack);
   res.status(500).json({
